@@ -1,0 +1,31 @@
+---
+import { Picture } from "@astrojs/image/components";
+import { featuresData } from "../../data/data.js";
+---
+
+<section id="features">
+   <div class="section-container my-20">
+      <div class="flex flex-col md:flex-row md:space-x-32">
+         <Picture
+            src="/img/image-computer.png"
+            widths={[200, 400, 800]}
+            aspectRatio="4:3"
+            sizes="(max-width: 800px) 100vw, 800px"
+            alt="A computer"
+            class="mb-10 "
+         />
+         <article class="space-y-5">
+            {
+               featuresData.map((feature) => (
+                  <div class="md:text-left" >
+                     <h5 class="mb-2 text-2xl font-bold text-darkGrayishBlue">{feature.title}</h5>
+                     <p class="  text-grayishBlue">{feature.text}</p>
+                  </div>
+               ))
+            }
+         </article>
+      </div>
+   </div>
+</section>
+
+<!-- NOTE: Picture component is very sluggish -->

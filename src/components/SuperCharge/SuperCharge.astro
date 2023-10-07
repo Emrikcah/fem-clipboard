@@ -1,0 +1,24 @@
+---
+import { superCharge } from "../../data/data";
+---
+
+<section id="supercharge">
+   <div class="section-container my-20">
+      <h3>Supercharge your workflow</h3>
+      <p class="text mb-16 text-xl">We've got the tools to boost your productivity.</p>
+
+      <div class="flex flex-col items-cente justify-between space-y-16 md:flex-row md:space-y-0 md:gap-x-4">
+         {
+            superCharge.map((item) => (
+               <div class="text-center">
+                  <img src={item.img} alt={item.alt} class="mb-6 inline-block " />
+                  <h5>{item.title}</h5>
+                  <p class="text mb-16">{item.text}</p>
+               </div>
+            ))
+         }
+      </div>
+   </div>
+</section>
+
+

@@ -1,0 +1,6 @@
+---
+const {bgColor} = Astro.props;
+const {text} = Astro.props;
+---
+
+<a class={`p-4 px-8 rounded-full shadow-lg text-white ${bgColor} duration-200 hover:opacity-80`}>{text}</a>
